@@ -1,0 +1,14 @@
+# Ambiente Virtual
+# python -m venv env-env
+# env-env\Scripts\activate
+
+# Instalando
+# pip install PyAutoGUI
+
+# pip install mouseinfo
+# python
+# from mouseinfo import mouseInfo
+# mouseInfo()
+
+# pip install Pillow
+# pip install pyscreeze
