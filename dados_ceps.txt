@@ -1,0 +1,3 @@
+CEP: 01517100, Rua: Viaduto 31 de Março , Bairro: Liberdade , Cidade: São Paulo/SP , CEP Retornado: 01517-100
+CEP: 04030050, Rua: Rua Abel Salazar , Bairro: Ibirapuera , Cidade: São Paulo/SP , CEP Retornado: 04030-050
+CEP: 04912060, Rua: Avenida Inglaterra , Bairro: Guarapiranga , Cidade: São Paulo/SP , CEP Retornado: 04912-060
