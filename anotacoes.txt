@@ -11,4 +11,23 @@
 # mouseInfo()
 
 # pip install Pillow
+# Pillow é uma biblioteca de processamento de imagens que permite abrir, manipular e salvar diferentes formatos de arquivo de imagem.
+
 # pip install pyscreeze
+# PyScreeze é uma biblioteca para capturar capturas de tela (screenshots) e manipular imagens na tela, usada internamente pelo PyAutoGUI.
+
+# pip install selenium
+# Selenium é uma biblioteca para automação de navegadores web. É frequentemente usada para testar aplicativos web e para a web scraping.
+
+# pip install requests
+# Requests é uma biblioteca HTTP simples e elegante para Python. Ela facilita o envio de solicitações HTTP e o tratamento de respostas.
+
+# pip install opencv-python
+# OpenCV é uma biblioteca de visão computacional e processamento de imagens. `opencv-python` é a versão Python dessa biblioteca.
+
+# pip install pywin32
+# PyWin32 é uma coleção de módulos para acessar a API do Windows a partir do Python. Permite automação e controle de várias funcionalidades do Windows.
+
+# pip install keyboard
+# A biblioteca Keyboard permite ouvir e enviar eventos de teclado no Windows e Linux. É útil para automação e criação de atalhos de teclado.
+
