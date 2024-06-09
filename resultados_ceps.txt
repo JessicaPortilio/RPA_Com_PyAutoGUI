@@ -1,0 +1,4 @@
+Endereco,Bairro,Cidade,CEP
+Viaduto 31 de Março,Liberdade,São Paulo,01517-100
+Rua Abel Salazar,Ibirapuera,São Paulo,04030-050
+Avenida Inglaterra,Guarapiranga,São Paulo,04912-060
