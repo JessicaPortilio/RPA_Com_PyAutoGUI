@@ -17,7 +17,7 @@ def localizar_e_clicar(imagem, max_tentativas = MAX_TENTATIVAS_IMAGEM, tempo_esp
     tentativas = 0
     while tentativas < max_tentativas:
         try:
-            localizao = locateCenterOnScreen(imagem)
+            localizao = locateCenterOnScreen(imagem, confidence=0.8)
             if localizao:
                 moveTo(localizao, duration=tempo_espera)
                 doubleClick()
@@ -34,7 +34,7 @@ local_jogo_flag = False
 finalizou_flag = False
 while indice < MAX_TENTATIVAS and not local_jogo_flag:
     try:
-        local_jogo = locateCenterOnScreen(BLUESTACKS)
+        local_jogo = locateCenterOnScreen(BLUESTACKS, confidence=0.8)
         if local_jogo:
             local_jogo_flag = True
             
