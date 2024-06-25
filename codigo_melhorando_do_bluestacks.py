@@ -1,87 +1,68 @@
-import pyautogui  # Biblioteca para automação de controle do mouse e teclado
-import time  # Biblioteca para manipulação de tempo
-# import cv2  # Biblioteca para processamento de imagens
-import keyboard  # Biblioteca para detecção de teclas pressionadas
+import pyautogui
+import time
+import keyboard
 
-# Dicionário que mapeia nomes de ações para os arquivos de imagem correspondentes
 IMAGEM = {
     'BlueStacks': 'BlueStacks.png',
     'meusjogos': 'meusjogos.png',
-    'CafeMania': 'CafeMania.png',
-    'Jogar': 'Jogar.png',
-    'Yes': 'yes.png'
+    'Cafemania': 'CafeMania.png',
+    'Jogar': 'Jogar.png'
 }
 
-# Função que imprime a posição atual do mouse na tela
-def get_mouse():
-    try:
-        print(pyautogui.position())  # Imprime a posição do mouse
-    except Exception as e:
-        print(f"Erro ao obter a posição do mouse: {e}")  # Captura e imprime erros
-
-# Função que procura e clica nas imagens especificadas
 def image_game():
-    # Dicionário para rastrear quais imagens já foram encontradas
-    found_images = {'BlueStacks': False, 'meusjogos': False, 'CafeMania': False, 'Jogar': False, 'Yes': False}
+    imagens_encontradas = {'BlueStacks' : False, 'meusjogos': False, 'Cafemania': False, 'Jogar': False}
+    while not all(imagens_encontradas.values()):
+        
+        if not imagens_encontradas['BlueStacks']:
+            try:
+                posicao_da_imagem_localizada = pyautogui.locateCenterOnScreen(IMAGEM['BlueStacks'],grayscale= True , confidence=0.8)
+                print(f'BlueStacks: {posicao_da_imagem_localizada}')
+                if posicao_da_imagem_localizada != None:
+                    pyautogui.doubleClick(posicao_da_imagem_localizada)
+                    imagens_encontradas['BlueStacks'] = True
+            except Exception as e:
+                print(f"Erro ao localizar ou clicar em 'BlueStacks': {e}")
+        
+        if not imagens_encontradas['meusjogos']:
+            try:
+                posicao_da_imagem_localizada = pyautogui.locateCenterOnScreen(IMAGEM['meusjogos'],grayscale= True , confidence=0.8)
+                print(f'meusjogos: {posicao_da_imagem_localizada}')
+                if posicao_da_imagem_localizada != None:
+                    pyautogui.click(posicao_da_imagem_localizada)
+                    imagens_encontradas['meusjogos'] = True
+            except Exception as e:
+                print(f"Erro ao localizar ou clicar em 'meusjogos': {e}")
     
-    # Loop que continua até que todas as imagens sejam encontradas
-    while not all(found_images.values()):
-        # Se a imagem 'BlueStacks' ainda não foi encontrada
-        if not found_images['BlueStacks']:
+        if not imagens_encontradas['Cafemania']:
             try:
-                # Procura a imagem na tela
-                image_location = pyautogui.locateCenterOnScreen(IMAGEM['BlueStacks'], grayscale=True, confidence=0.8)
-                print(f'BlueStacks: {image_location}')  # Imprime a posição da imagem encontrada
-                if image_location is not None:
-                    pyautogui.doubleClick(image_location)  # Dá um duplo clique na posição da imagem
-                    found_images['BlueStacks'] = True  # Marca como encontrada
+                posicao_da_imagem_localizada = pyautogui.locateCenterOnScreen(IMAGEM['Cafemania'],grayscale= True , confidence=0.8)
+                print(f'Cafemania: {posicao_da_imagem_localizada}')
+                if posicao_da_imagem_localizada != None:
+                    pyautogui.click(posicao_da_imagem_localizada)
+                    imagens_encontradas['Cafemania'] = True
             except Exception as e:
-                print(f"Erro ao localizar ou clicar em 'BlueStacks': {e}")  # Captura e imprime erros
+                print(f"Erro ao localizar ou clicar em 'Cafemania': {e}")
         
-        # Se a imagem 'meusjogos' ainda não foi encontrada
-        if not found_images['meusjogos']:
+        if not imagens_encontradas['Jogar']:
             try:
-                image_location = pyautogui.locateCenterOnScreen(IMAGEM['meusjogos'], grayscale=True, confidence=0.8)
-                print(f'Meus Jogos: {image_location}')
-                if image_location is not None:
-                    pyautogui.click(image_location)  # Clica na posição da imagem
-                    found_images['meusjogos'] = True  # Marca como encontrada
-            except Exception as e:
-                print(f"Erro ao localizar ou clicar em 'Meus Jogos': {e}")
-        
-        # Se a imagem 'CafeMania' ainda não foi encontrada
-        if not found_images['CafeMania']:
-            try:
-                image_location = pyautogui.locateCenterOnScreen(IMAGEM['CafeMania'], grayscale=True, confidence=0.8)
-                print(f'CafeMania: {image_location}')
-                if image_location is not None:
-                    pyautogui.click(image_location)  # Clica na posição da imagem
-                    found_images['CafeMania'] = True  # Marca como encontrada
-            except Exception as e:
-                print(f"Erro ao localizar ou clicar em 'CafeMania': {e}")
-        
-        # Se a imagem 'Jogar' ainda não foi encontrada
-        if not found_images['Jogar']:
-            try:
-                image_location = pyautogui.locateCenterOnScreen(IMAGEM['Jogar'], grayscale=True, confidence=0.8)
-                print(f'Jogar: {image_location}')
-                if image_location is not None:
-                    pyautogui.click(image_location)  # Clica na posição da imagem
-                    found_images['Jogar'] = True  # Marca como encontrada
+                posicao_da_imagem_localizada = pyautogui.locateCenterOnScreen(IMAGEM['Jogar'],grayscale= True , confidence=0.8)
+                print(f'Jogar: {posicao_da_imagem_localizada}')
+                if posicao_da_imagem_localizada != None:
+                    pyautogui.click(posicao_da_imagem_localizada)
+                    imagens_encontradas['Jogar'] = True
             except Exception as e:
                 print(f"Erro ao localizar ou clicar em 'Jogar': {e}")
         
-        time.sleep(0.1)  # Pequeno atraso para evitar uso excessivo da CPU
+        time.sleep(0.1)
 
-# Adiciona um atalho de teclado: 'p' para obter a posição do mouse
-keyboard.add_hotkey('p', get_mouse)
-# Adiciona um atalho de teclado: 'i' para iniciar a função de procura das imagens
+
 keyboard.add_hotkey('i', image_game)
 
-# Loop infinito para manter o script ativo
-print("Pressione 'p' ou 'i' para obter a posição do mouse ou iniciar o jogo. Pressione 'q' para sair.")
+print(f"Pressione 'i' para inicializar a busca pelas imagens ou pressione 's' para sair.")
+
 while True:
-    if keyboard.is_pressed('q'):
-        print("Saindo...")  # Imprime mensagem de saída
+    if keyboard.is_pressed('s'):
+        print('Saindo...')
         break
-    time.sleep(0.1)  # Pequeno atraso para evitar uso excessivo da CPU
+    time.sleep(0.1)
+        
