@@ -31,3 +31,6 @@
 # pip install keyboard
 # A biblioteca Keyboard permite ouvir e enviar eventos de teclado no Windows e Linux. É útil para automação e criação de atalhos de teclado.
 
+# pip install openpyxl
+
+# pip install pywin32
