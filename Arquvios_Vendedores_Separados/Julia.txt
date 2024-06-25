@@ -1,0 +1,3 @@
+Vendedor, Produtos, Vendas
+Julia, Tablets, 600
+Julia, Mouses, 200

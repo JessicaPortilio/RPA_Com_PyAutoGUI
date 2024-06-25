@@ -1,0 +1,5 @@
+Vendedor, Produtos, Vendas
+Ana, Computadores, 1500
+Ana, Monitores, 400
+Ana, Teclados, 500
+Ana, Tables, 100

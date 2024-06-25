@@ -1,0 +1,4 @@
+Vendedor, Produtos, Vendas
+João, Monitores, 300
+João, Impressoras, 200
+João, Mouses, 200

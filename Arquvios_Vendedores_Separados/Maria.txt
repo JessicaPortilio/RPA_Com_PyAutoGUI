@@ -1,0 +1,3 @@
+Vendedor, Produtos, Vendas
+Maria, Teclados, 500
+Maria, Tablets, 100

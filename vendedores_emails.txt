@@ -1,0 +1,8 @@
+Ana, ana@example.com
+João, joao@example.com
+Maria, maria@example.com
+Carlos, carlos@example.com
+Fernanda, fernanda@example.com
+Lucas, lucas@example.com
+Julia, julia@example.com
+Roberto, roberto@example.com

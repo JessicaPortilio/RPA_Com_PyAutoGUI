@@ -1,0 +1,3 @@
+Vendedor, Produtos, Vendas
+Lucas, Notebooks, 800
+Lucas, Computadores, 600

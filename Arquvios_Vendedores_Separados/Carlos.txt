@@ -1,0 +1,6 @@
+Vendedor, Produtos, Vendas
+Carlos, Mouses, 700
+Carlos, Notebooks, 300
+Carlos, Smartphones, 900
+Carlos, Monitores, 400
+Carlos, Impressoras, 600

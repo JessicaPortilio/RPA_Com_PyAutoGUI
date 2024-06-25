@@ -1,0 +1,3 @@
+Vendedor, Produtos, Vendas
+Roberto, Smartphones, 900
+Roberto, Teclados, 250

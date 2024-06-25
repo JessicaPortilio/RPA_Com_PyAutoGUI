@@ -1,0 +1,3 @@
+Vendedor, Produtos, Vendas
+Fernanda, Impressoras, 400
+Fernanda, Smartphones, 150
